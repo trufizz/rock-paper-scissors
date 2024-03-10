@@ -21,7 +21,7 @@
             }
         }
 
-        const playerSelection = "Rock";
+        const playerSelection = prompt("Rock, Paper, or Scissors?");
         const computerSelection = getComputerChoice();
 
         console.log("Player Selection:", playerSelection);
@@ -59,7 +59,15 @@
             }
         }
 
-        console.log(playRound(playerSelection, computerSelection))
+        function playGame(x) {
+            let y = 0;
+            while(y < x) {
+                console.log(playRound(playerSelection, computerSelection));
+                y++;
+            }
+        }
+
+        console.log(playGame(10))
     </script>
 </body>
 </html>
